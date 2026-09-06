@@ -1,7 +1,12 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -11,9 +16,45 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #07090d;
-  color: white;
+  color: #e5e7eb;
+  min-height: 100vh;
 }
 
 #root {
   min-height: 100vh;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0d14;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1a1f2e;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2a3040;
+}
+
+/* Selection */
+::selection {
+  background: rgba(0, 212, 255, 0.2);
+  color: #e5e7eb;
+}
+
+/* Focus styles */
+textarea:focus {
+  outline: none;
+}
+
+button:focus-visible {
+  outline: 2px solid #00d4ff;
+  outline-offset: 2px;
 }
