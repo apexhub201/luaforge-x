@@ -6,5 +6,13 @@ export default defineConfig({
   server: {
     port: 3000,
     host: true,
+    open: true,
+  },
+  build: {
+    target: 'es2020',
+    sourcemap: true,
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom'],
   },
 });
